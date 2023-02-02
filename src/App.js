@@ -1,8 +1,8 @@
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import Topbar from "./scenes/global/Topbar";
-import { Sidebar } from "react-pro-sidebar";
-// import Dashboard from "./scenes/dashboard";
+import Sidebar from "./scenes/global/Sidebar";
+import Dashboard from "./scenes/dashboard";
 // import Team from "./scenes/team";
 // import Invoices from "./scenes/invoices";
 // import Contacts from "./scenes/contacts";
@@ -27,7 +27,7 @@ function App() {
           <main className="content">
             <Topbar />
             <Routes>
-              {/* <Route path="/" element={<Dashboard />} /> */}
+              <Route path="/" element={<Dashboard />} />
               {/* <Route path="/team" element={<Team />} /> */}
               {/* <Route path="/contacts" element={<Contacts />} /> */}
               {/* <Route path="/invoices" element={<Invoices />} /> */}
