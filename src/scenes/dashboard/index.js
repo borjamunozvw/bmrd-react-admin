@@ -10,7 +10,7 @@ import Header from "../../components/Header";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
-
+import PieChart from "../../components/PieChart";
 const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -159,6 +159,7 @@ const Dashboard = () => {
             </Box>
           </Box>
           <Box height="250px" m="-20px 0 0 0">
+            <BarChart />
             {/* <LineChart isDashboard={true} /> */}
           </Box>
         </Box>
@@ -267,9 +268,10 @@ const Dashboard = () => {
             fontWeight="600"
             sx={{ marginBottom: "15px" }}
           >
-            Geography Based Traffic
+           Traffic
           </Typography>
           <Box height="200px">
+            <PieChart isDashboard={true} />
             {/* <GeographyChart isDashboard={true} /> */}
           </Box>
         </Box>
