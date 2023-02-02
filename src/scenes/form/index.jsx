@@ -2,7 +2,7 @@ import { Box, Button, TextField, useTheme } from "@mui/material";
 import { Formik } from "formik";
 import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { Header } from "../../components/Header";
+import Header from "../../components/Header";
 import { tokens } from "../../theme";
 
 const Form = () => {

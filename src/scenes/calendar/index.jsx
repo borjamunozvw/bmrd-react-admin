@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FullCalendar from "@fullcalendar/react";
-import formatDate from "@fullcalendar/react";
+import { formatDate } from "@fullcalendar/core";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
@@ -13,7 +13,7 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import { Header } from "../../components/Header";
+import Header from "../../components/Header";
 import { tokens } from "../../theme";
 
 const Calendar = () => {
@@ -46,6 +46,7 @@ const Calendar = () => {
       selected.event.remove();
     }
   };
+
   return (
     <Box m="20px">
       <Header title="Calendar" subtitle="fullcalendar interactive text" />
@@ -58,7 +59,7 @@ const Calendar = () => {
         >
           <Typography variant="h5">Events</Typography>
           <List>
-            {currentEvents.map((event) => (
+            {currentEvents?.map((event) => (
               <ListItem
                 key={event.id}
                 sx={{
@@ -105,17 +106,18 @@ const Calendar = () => {
             dayMaxEvents={true}
             select={handleDateClick}
             eventClick={handleEventClick}
+            // eventsSet={setEventsClick}
             eventsSet={(events) => setCurrentEvents(events)}
             initialEvents={[
               {
                 id: "12315",
                 title: "All-day event",
-                date: "2022-09-14",
+                date: "2023-02-01",
               },
               {
                 id: "5123",
                 title: "Timed event",
-                date: "2022-09-28",
+                date: "2023-02-03",
               },
             ]}
           />

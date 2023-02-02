@@ -1,7 +1,6 @@
 import { Typography, Box, useTheme } from "@mui/material";
 import { tokens } from "../theme";
-
-export const Header = ({ title, subtitle, children }) => {
+ const Header = ({ title, subtitle, children }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -22,3 +21,6 @@ export const Header = ({ title, subtitle, children }) => {
     </Box>
   );
 };
+
+
+export default Header
